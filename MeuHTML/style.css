@@ -1,0 +1,100 @@
+body {
+    font-family: 'Young Serif', serif;
+    margin: 0;
+    padding: 0;
+    padding-top: 60px;
+    background-color: beige
+}
+
+header {
+    position: fixed; /* Fixa o header no topo */
+    top: 0; /* Zero pixels a partir do topo da janela */
+    left: 0; /* Zero pixels a partir da esquerda da janela */
+    width: 100%; /* Ocupa toda a largura da janela */
+    z-index: 1000; /* Garante que o header fique no topo de outros elementos */
+}
+
+.navbar {
+    background-color: rgb(50, 50, 50);
+    overflow: hidden;
+    display: flex;
+    justify-content: center; /* horizontal*/
+    align-items: center; /* vertical */
+}
+.navbar a{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar a:hover {
+    background-color: rgb(77, 77, 77);
+    color: #c9c9c9;
+    transition: background-color 0.3s;
+}
+
+.link-curso {
+    color: #0077cc;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s, border-color 0.3s;
+}
+.link-curso:hover{
+    color: #005fa3;
+    border-color: #005fa3;
+
+}
+
+section {
+    margin-top: -60px;
+    padding-top: 60px;
+    margin-left: 25px;
+    margin-right: 25px;
+    display: flex;          /*ativa o flexbox*/
+    justify-content: space-between; /*espaço entre o texto e a imagem */
+    align-items: center;    /*alinha verticalmente ao centro*/
+    flex-wrap: wrap;        /*envolver itens em linhas separadas se não houver espaço suficiente */
+}
+
+section p, section picture {
+    flex: 1;                /*ambos os elementos cresçam e ocupem metade do espaço */
+    margin-bottom: 10px;
+    padding: 25px;          /*espaçamento ao redor do texto e imagem */
+}
+
+
+section img {
+    max-width: 100%;        /*não exceder a area da conteiner*/
+    height: auto;           /*mantem a proporção*/
+}
+
+/* Para seções ímpares, onde a imagem deve estar à direita */
+section:nth-of-type(even) {
+    flex-direction: row-reverse;
+}
+
+footer {
+    text-align: center; /* centralizar*/
+    background-color: rgb(29, 29, 29);
+    color: white;
+    padding: 10px;
+}
+footer i {
+    color: #ffffff;
+    padding: 7px;
+}
+footer a {
+    text-decoration: none; /* Remove o sublinhado */
+}
+
+footer a:visited {
+    color: inherit;/*link mantenha sua cor mesmo após click */
+}
